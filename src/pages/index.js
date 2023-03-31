@@ -37,7 +37,7 @@ export default function Home() {
             <AiFillLinkedin />
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20">
-            <Image src={ myImage } layout="fill" objectFit="cover"/>
+            <Image src={ myImage } alt="bonequinho icone"/>
           </div>
         </section>
         
@@ -50,7 +50,7 @@ export default function Home() {
             </div>
             <div className="lg:flex gap-10">
               <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <Image src={ game } width={650} height={650} />
+                <Image src={ game } alt="aplicação" width={650} height={650} />
                 <h3 className="text-lg font-medium pt-8 pb-2"> Meu Jogo Da Velha</h3>
                 <p className="py-2 ">Meu Jogo da velha criado em html, css</p>
                 <h4 className="py-4 text-teal-600">Tecnologias Utilizadas</h4>
@@ -59,7 +59,7 @@ export default function Home() {
                 <p className="text-gray-800 py-1">JavaScript</p>
               </div>
               <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <Image src={ game } width={100} height={100} />
+                <Image src={ game } alt="aplicação" width={100} height={100} />
                 <h3 className="text-lg font-medium pt-8 pb-2"> Meu Jogo Da Velha</h3>
                 <p className="py-2 ">Meu Jogo da velha criado em html, css</p>
                 <h4 className="py-4 text-teal-600">Tecnologias Utilizadas</h4>
@@ -68,7 +68,7 @@ export default function Home() {
                 <p className="text-gray-800 py-1">JavaScript</p>
               </div>
               <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <Image src={ game } width={100} height={100} />
+                <Image src={ game } alt="aplicação" width={100} height={100} />
                 <h3 className="text-lg font-medium pt-8 pb-2"> Meu Jogo Da Velha</h3>
                 <p className="py-2 ">Meu Jogo da velha criado em html, css</p>
                 <h4 className="py-4 text-teal-600">Tecnologias Utilizadas</h4>
