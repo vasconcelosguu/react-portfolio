@@ -2,12 +2,12 @@ import Head from 'next/head'
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import Image from 'next/image';
 import myImage from '../public/boy.jpg'
-import SolarSystem from '@/components/SolarSystem'
-import TFC from '@/components/TFC'
-import TrybeTunes from '@/components/TrybeTunes'
+import SolarSystem from '../components/SolarSystem'
+import TFC from '../components/Tfc'
+import TrybeTunes from '../components/TrybeTunes'
 import { useContext } from 'react';
-import { MyContext } from '@/Context/context';
-import Navbar from '@/components/NavBar';
+import { MyContext } from '../Context/context';
+import Navbar from '../components/NavBar';
 
 export default function Home() {
   const {darkMode} = useContext(MyContext);
