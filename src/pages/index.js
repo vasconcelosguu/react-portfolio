@@ -1,13 +1,16 @@
-import Head from 'next/head'
-import {BsFillMoonStarsFill} from 'react-icons/bs'
-import {AiFillLinkedin} from 'react-icons/ai'
+import Head from 'next/head' 
+import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import Image from 'next/image';
 import myImage from '../public/boy.jpg'
-import game from '../public/Jogo Da Velha.jpg'
-import { useState } from 'react';
+import SolarSystem from '@/components/SolarSystem'
+import TFC from '@/components/TFC'
+import TrybeTunes from '@/components/TrybeTunes'
+import { useContext } from 'react';
+import { MyContext } from '@/Context/context';
+import Navbar from '@/components/NavBar';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const {darkMode} = useContext(MyContext);
   return (
     <div className={darkMode? "dark": ""}>
       <Head>
@@ -16,69 +19,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="bg-white md:px-20 lg:px-40 dark:bg-gray-900">
         <section className="min-h-screen">
-          <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className="text-xl font-burtons">DevelopedByEd</h1>
-            <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill
-                onClick={() => setDarkMode(!darkMode)}
-                className="cursor-pointer text-2xl"/>
-              </li>
-              <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='#'>Resume</a></li>
-            </ul>
-          </nav>
+          <Navbar />
           <div className="text-center py-10">
-            <h2 className="text-5xl py-2 text-teal-300 font-medium md:text-6xl"> Gustavo Vasconcelos </h2>
-            <h3 className="text-2xl py-2 md:text-3xl"> Full Stack Dev</h3>
+            <h3 className="text-5xl py-2 text-teal-300 font-medium md:text-6xl"> Gustavo Vasconcelos </h3>
+            <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Eu sou um desenvolvedor Full Stack</h4>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <AiFillLinkedin />
+          <button><a target="_blank" href="https://www.linkedin.com/in/vasconcelos-gu/" ><AiFillLinkedin /></a></button>
+          <button><a target="_blank" href="https://github.com/vasconcelosguu" ><AiFillGithub /></a></button>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20">
             <Image src={ myImage } alt="bonequinho icone"/>
           </div>
+          <h3 className="text-center text-teal-300 py-5 m-20 font-medium text-5xl">Projetos Em Destaque</h3>
         </section>
         
           <section>
-            <div>
-              <h3 className="text-3xl- py-1">Services I offer</h3>
-              <p className="text-md py-2 leading-8 text-gray-800">Front end developer</p>
-              <p className="text-md py-2 leading-8 text-gray-800">Front end developer</p>
-              <p className="text-md py-2 leading-8 text-gray-800">Front end developer</p>
-            </div>
             <div className="lg:flex gap-10">
-              <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <Image src={ game } alt="aplicação" width={650} height={650} />
-                <h3 className="text-lg font-medium pt-8 pb-2"> Meu Jogo Da Velha</h3>
-                <p className="py-2 ">Meu Jogo da velha criado em html, css</p>
-                <h4 className="py-4 text-teal-600">Tecnologias Utilizadas</h4>
-                <p className="text-gray-800 py-1">Html</p>
-                <p className="text-gray-800 py-1">Css</p>
-                <p className="text-gray-800 py-1">JavaScript</p>
-              </div>
-              <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <Image src={ game } alt="aplicação" width={100} height={100} />
-                <h3 className="text-lg font-medium pt-8 pb-2"> Meu Jogo Da Velha</h3>
-                <p className="py-2 ">Meu Jogo da velha criado em html, css</p>
-                <h4 className="py-4 text-teal-600">Tecnologias Utilizadas</h4>
-                <p className="text-gray-800 py-1">Html</p>
-                <p className="text-gray-800 py-1">Css</p>
-                <p className="text-gray-800 py-1">JavaScript</p>
-              </div>
-              <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <Image src={ game } alt="aplicação" width={100} height={100} />
-                <h3 className="text-lg font-medium pt-8 pb-2"> Meu Jogo Da Velha</h3>
-                <p className="py-2 ">Meu Jogo da velha criado em html, css</p>
-                <h4 className="py-4 text-teal-600">Tecnologias Utilizadas</h4>
-                <p className="text-gray-800 py-1">Html</p>
-                <p className="text-gray-800 py-1">Css</p>
-                <p className="text-gray-800 py-1">JavaScript</p>
-              </div>
-              
-              
-            </div>
+              <TrybeTunes />
+              <SolarSystem />
+              <TFC />
+           </div>
           </section>
 
       </main>
