@@ -19,8 +19,8 @@ export default function Navbar() {
                 onClick={() => setDarkMode(!darkMode)}
                 className="cursor-pointer text-2xl"/>}
               </li>
-              {router.pathname !== '/' &&  <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='/'>Home</a></li>}
-              {router.pathname !== '/projects' && <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='/'>Projetos</a></li>}
+              {router.pathname !== '/' &&  <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='https://vasconcelosguu.github.io/react-portfolio/'>Home</a></li>}
+              {router.pathname !== '/projects' && <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='https://vasconcelosguu.github.io/react-portfolio/'>Projetos</a></li>}
             </ul>
   </nav>
   )
