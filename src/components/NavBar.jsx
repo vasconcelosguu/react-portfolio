@@ -1,4 +1,5 @@
-import {BsFillMoonStarsFill, BsFillSunFill} from 'react-icons/bs' 
+import {BsFillMoonStarsFill, BsFillSunFill} from 'react-icons/bs'
+import Link from 'next/link'; 
 import { MyContext } from '@/Context/context'
 import Image from 'next/image';
 import myLogo from '../public/GV .svg'
@@ -19,8 +20,10 @@ export default function Navbar() {
                 onClick={() => setDarkMode(!darkMode)}
                 className="cursor-pointer text-2xl"/>}
               </li>
-              {router.pathname !== '/' &&  <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='https://vasconcelosguu.github.io/react-portfolio/'>Home</a></li>}
-              {router.pathname !== '/projects' && <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='https://vasconcelosguu.github.io/react-portfolio/'>Projetos</a></li>}
+              {router.pathname !== '/' && (<Link className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='/'>
+                Home</Link>)}
+              {router.pathname === '/' &&(<Link className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href='/projects'>
+                Projects</Link>) }
             </ul>
   </nav>
   )
