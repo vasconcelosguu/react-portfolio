@@ -13,7 +13,7 @@ export default function TFC() {
       <p className="text-gray-800 py-1">MySql</p>
       <p className="text-gray-800 py-1">TypeScript</p>
       <p className="text-gray-800 py-1">JypeScript</p>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><a target="_blank" href="https://github.com/vasconcelosguu/Solar-System" >Acesse o Repositorio</a></button>
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><a target="_blank" href="https://github.com/vasconcelosguu/Trybe-Futebol-Clube" >Acesse o Repositorio</a></button>
     </div>
   </div>
   )
