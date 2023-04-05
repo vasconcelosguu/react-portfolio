@@ -43,7 +43,6 @@ export default function Home() {
               <TFC />
            </div>
           </section>
-
       </main>
     </div>
   );
