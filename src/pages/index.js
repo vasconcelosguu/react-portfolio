@@ -8,6 +8,7 @@ import TrybeTunes from '../components/TrybeTunes'
 import { useContext } from 'react';
 import { MyContext } from '../Context/context';
 import Navbar from '../components/NavBar';
+import Certificates from '@/components/Certificates';
 
 export default function Home() {
   const {darkMode} = useContext(MyContext);
@@ -27,8 +28,8 @@ export default function Home() {
             <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Eu sou um desenvolvedor Full Stack</h4>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-          <button><a target="_blank" href="https://www.linkedin.com/in/vasconcelos-gu/" ><AiFillLinkedin /></a></button>
-          <button><a target="_blank" href="https://github.com/vasconcelosguu" ><AiFillGithub /></a></button>
+          <button><a target="_blank" className="hover:text-white" href="https://www.linkedin.com/in/vasconcelos-gu/" ><AiFillLinkedin /></a></button>
+          <button><a target="_blank" className="hover:text-white" href="https://github.com/vasconcelosguu" ><AiFillGithub /></a></button>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20">
             <Image src={ myImage } alt="bonequinho icone"/>
@@ -42,6 +43,15 @@ export default function Home() {
               <SolarSystem />
               <TFC />
            </div>
+          </section>
+
+          <div>
+          <h3 className="text-center text-teal-300 py-5 m-20 font-medium text-5xl">Meus Certificados</h3>
+          </div>
+          <section>
+            <div className="lg:flex gap-10">
+              <Certificates />
+            </div>
           </section>
       </main>
     </div>
