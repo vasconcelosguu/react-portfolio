@@ -1,12 +1,3 @@
-import Image from "next/image";
-import ReactIcon from "../public/React Icon.svg";
-import CertificadoFront from '../public/Certificado Front.jpg'
-import Js from "../public/Js.svg";
-import Jest from "../public/Jest.svg";
-import Ts from "../public/Ts.svg";
-import VueJs from "../public/VueJs.svg";
-import css from "../public/css.svg";
-import Html from "../public/Html.svg";
 import Navbar from "@/components/NavBar";
 import { useContext } from "react";
 import { MyContext } from "@/Context/context";
