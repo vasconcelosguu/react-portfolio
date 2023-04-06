@@ -26,7 +26,7 @@ export default function Navbar() {
           {darkMode ? (
             <BsFillSunFill
               onClick={() => setDarkMode(!darkMode)}
-              className="cursor-pointer text-2xl"
+              className="cursor-pointer text-2xl dark:text-white"
             />
           ) : (
             <BsFillMoonStarsFill
@@ -63,22 +63,22 @@ export default function Navbar() {
         </div>
 
         <div className="mr-2 flex md:hidden">
-          <button className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-400 focus:bg-gray-700 focus:text-gray-900 transition duration-250 ease-in-out" aria-label="Menu" aria-expanded="false" onClick={ () => setDropMenu(!dropMenu) } type="button">
+          <button className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-400 focus:bg-gray-700 focus:text-gray-900 transition duration-250 ease-in-out dark:text-white" aria-label="Menu" aria-expanded="false" onClick={ () => setDropMenu(!dropMenu) } type="button">
             <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
-        <div className={!dropMenu ? "hidden md:hidden": "md:hidden"}>
-          <div className="px-2 pt-2 pb-3 sm:px-3">
-            <a href="/" className="hover:bg-gray-400 text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-250 ease-in-out">Home</a>
-            <a href="/projects" className="hover:bg-gray-400 text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-250 ease-in-out">Meus Projetos</a>
-            <a href="/about" className="hover:bg-gray-400 text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-250 ease-in-out">Sobre Mim</a>
-          </div>
-
-        </div>  
       </ul>
+     
     </nav>
+    <div className={!dropMenu ? "hidden md:hidden": "md:hidden"}>
+          <div className="px-2 pt-2 pb-3 text-center sm:px-3">
+            <Link href="/" className="hover:bg-gray-400 text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-250 ease-in-out dark:text-white">Home</Link>
+            <Link href="/projects" className="hover:bg-gray-400 text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-250 ease-in-out dark:text-white">Meus Projetos</Link>
+            <Link href="/about" className="hover:bg-gray-400 text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-250 ease-in-out dark:text-white">Sobre Mim</Link>
+          </div>
+        </div>  
     </div>
   );
 }
