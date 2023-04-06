@@ -4,6 +4,15 @@
 /node_modules
 /.pnp
 .pnp.js
+.gitignore
+.package-lock.json
+.package-lock
+.jsconfig.json
+.next.config.js
+.postcss.config.js
+.tailwind.config.js
+.babelrc
+
 
 # testing
 /coverage
