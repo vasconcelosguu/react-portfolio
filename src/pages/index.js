@@ -9,6 +9,7 @@ import { useContext } from 'react';
 import { MyContext } from '../Context/context';
 import Navbar from '../components/NavBar';
 import Certificates from '@/components/Certificates';
+import Link from 'next/link';
 
 export default function Home() {
   const {darkMode} = useContext(MyContext);
@@ -28,8 +29,8 @@ export default function Home() {
             <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Eu sou um desenvolvedor Full Stack</h4>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-          <button><a target="_blank" className="hover:text-white" href="https://www.linkedin.com/in/vasconcelos-gu/" ><AiFillLinkedin /></a></button>
-          <button><a target="_blank" className="hover:text-white" href="https://github.com/vasconcelosguu" ><AiFillGithub /></a></button>
+          <button><a target="_blank" className="hover:text-gray-800 dark:hover:text-white" href="https://www.linkedin.com/in/vasconcelos-gu/" ><AiFillLinkedin /></a></button>
+          <button><a target="_blank" className="hover:text-gray-800 dark:hover:text-white" href="https://github.com/vasconcelosguu" ><AiFillGithub /></a></button>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20">
             <Image src={ myImage } alt="bonequinho icone"/>
@@ -46,7 +47,14 @@ export default function Home() {
           </section>
 
           <div>
-          <h3 className="text-center text-teal-300 py-5 m-20 font-medium text-5xl">Meus Certificados</h3>
+            <h3 className="text-center
+             text-teal-300 py-5 m-20 font-medium text-5xl"
+             >Meus Certificados</h3>
+            <a className="text-center
+             text-teal-300 py-5 m-20 font-medium text-2xl" 
+             href='https://www.credential.net/profile/gustavovasconcelossalomo718186/wallet'
+             target='_blank'>
+              Clique aqui para acessar todos os certificados</a>
           </div>
           <section>
             <div className="lg:flex gap-10">
