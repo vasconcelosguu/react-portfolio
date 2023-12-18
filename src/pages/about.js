@@ -2,9 +2,12 @@ import Navbar from "@/components/NavBar";
 import { useContext } from "react";
 import { MyContext } from "@/Context/context";
 import Head from "next/head";
+import { FaBirthdayCake, FaBook } from "react-icons/fa";
+import { TbMessageLanguage } from "react-icons/tb";
 
 export default function About() {
   const { darkMode } = useContext(MyContext);
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -16,80 +19,81 @@ export default function About() {
           rel="stylesheet"
           href="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/css/main.ad49aa9b.css"
         />
-        <title>Gustavo Vasconcelos Porfolio| About</title>
+        <title>Gustavo Vasconcelos About</title>
       </Head>
-      <main className="bg-white md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="bg-gray-600 md:px-4 lg:px-8 dark:bg-gray-900">
         <Navbar />
-        <div class="flex flex-col justify-center items-center h-[100vh] dark:bg-gray-900">
-          <div class="relative flex flex-col items-center rounded-[20px] h-[70%] w-[80%] max-w-[95%] mx-auto bg-white bg-clip-border shadow-3xl shadow-shadow-500 dark:bg-gray-600 dark:text-white dark:!shadow-none p-3">
-            <div class="mt-2 mb-8 w-full">
-              <h4 class="px-2 text-center text-2xl font-bold text-navy-700 dark:text-teal-300">
-                Sobre Mim
-              </h4>
-              <p class="mt-2 px-2 text-base text-gray-600 dark:text-white">
-                Meu nome é Gustavo Vasconcelos Salomão, tenho 19 anos e sempre
-                nutri uma paixão pela criação de soluções tecnológicas. Em maio
-                de 2022, entrei de cabeça no fascinante mundo da tecnologia,
-                culminando na conclusão bem-sucedida de um curso abrangente de
-                Desenvolvimento Full Stack pela Trybe. Agora, estou dando
-                continuidade aos meus estudos na Unisagrado, localizada em
-                Bauru-SP, aprimorando ainda mais minha base de conhecimentos.
-                <br />
-                <br />
-                Minha jornada até aqui tem sido marcada pela dedicação e
-                entusiasmo pela área de desenvolvimento. Agora, estou animado
-                para dar o próximo passo em minha carreira profissional. Com uma
-                formação sólida e a habilidade de enfrentar desafios de forma
-                proativa, estou em busca da minha primeira oportunidade
-                profissional para aplicar meu conhecimento, crescer
-                profissionalmente e contribuir de maneira significativa para o
-                mundo da tecnologia. Estou confiante de que a combinação da
-                minha paixão, educação e vontade de aprender tornam-me um
-                candidato promissor. Aguardo ansiosamente a chance de contribuir
-                para projetos inovadores e continuar a trilhar meu caminho no
-                campo da tecnologia.
+        <div className="flex flex-col justify-center items-center min-h-screen dark:bg-gray-900">
+          <div className="w-full max-w-2xl mx-auto p-4 bg-white bg-clip-border shadow-lg rounded-md dark:bg-gray-600 dark:text-white dark:!shadow-none">
+            <h4 className="text-2xl text-cyan-500 font-bold text-navy-700 dark:text-teal-300 mb-4">
+              Sobre Mim
+            </h4>
+            <p className="text-base font-medium dark:text-white">
+              Meu nome é Gustavo Vasconcelos Salomão, tenho 19 anos e sempre
+              nutri uma paixão pela criação de soluções tecnológicas. Em maio de
+              2022, entrei de cabeça no fascinante mundo da tecnologia,
+              culminando na conclusão bem-sucedida de um curso abrangente de
+              Desenvolvimento Full Stack pela Trybe. Agora, estou dando
+              continuidade aos meus estudos na Unisagrado, localizada em
+              Bauru-SP, aprimorando ainda mais minha base de conhecimentos.
+              <br />
+              <br />
+              Minha jornada até aqui tem sido marcada pela dedicação e entusiasmo
+              pela área de desenvolvimento. Agora, estou animado para dar o
+              próximo passo em minha carreira profissional. Com uma formação
+              sólida e a habilidade de enfrentar desafios de forma proativa,
+              estou em busca da minha primeira oportunidade profissional para
+              aplicar meu conhecimento, crescer profissionalmente e contribuir
+              de maneira significativa para o mundo da tecnologia. Estou
+              confiante de que a combinação da minha paixão, educação e vontade
+              de aprender tornam-me um candidato promissor. Aguardo ansiosamente
+              a chance de contribuir para projetos inovadores e continuar a
+              trilhar meu caminho no campo da tecnologia.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 w-full max-w-2xl mx-auto">
+            <div className="flex flex-col items-start justify-center bg-white bg-clip-border p-4 shadow-lg rounded-md dark:!bg-navy-700 dark:shadow-none">
+              <p className="text-sm text-cyan-500 dark:text-teal-300 flex items-center">
+                Instituição de ensino
+                <FaBook className="ml-1" />
+              </p>
+              <p className="text-base font-medium text-navy-700 dark:text-white">
+                Desenvolvedor Full Stack - Trybe
+              </p>
+              <p className="text-base font-medium text-navy-700 dark:text-white">
+                Ciência da Computação - Unisagrado
               </p>
             </div>
-            <div class="grid grid-cols-2 gap-4 px-2 w-full">
-              <div class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                <p class="text-sm text-gray-600 dark:text-teal-300">
-                  Instituição de ensino
-                </p>
-                <p class="text-base font-medium text-navy-700 dark:text-white">
-                  Desenvolvedor Full Stack - Trybe
-                </p>
-                <p class="text-base font-medium text-navy-700 dark:text-white">
-                  Ciencia da Computação - Unisagrado
-                </p>
-              </div>
 
-              <div class="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                <p class="text-sm text-gray-600 dark:text-teal-300">
-                  Languages
-                </p>
-                <p class="text-base font-medium text-navy-700 dark:text-white">
-                  Português
-                </p>
-                <p class="text-base font-medium text-navy-700 dark:text-white">
-                  Inglês
-                </p>
-              </div>
+            <div className="flex flex-col justify-center bg-white bg-clip-border p-4 shadow-lg rounded-md dark:!bg-navy-700 dark:shadow-none">
+              <p className="text-sm text-cyan-500 dark:text-teal-300 flex items-center">
+                Idiomas
+                <TbMessageLanguage className="ml-1" />
+              </p>
+              <p className="text-base font-medium text-navy-700 dark:text-white">
+                Português
+              </p>
+              <p className="text-base font-medium text-navy-700 dark:text-white">
+                Inglês
+              </p>
+            </div>
 
-              <div class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                <p class="text-sm text-gray-600 dark:text-teal-300">Formação</p>
-                <p class="text-base font-medium text-navy-700 dark:text-white">
-                  Desenvolvedor Full-Stack
-                </p>
-              </div>
+            <div className="flex flex-col items-start justify-center bg-white bg-clip-border p-4 shadow-lg rounded-md dark:!bg-navy-700 dark:shadow-none">
+              <p className="text-sm text-cyan-500 dark:text-teal-300">Contato</p>
+              <p className="text-base font-medium text-navy-700 dark:text-white">
+                Desenvolvedor Full-Stack
+              </p>
+            </div>
 
-              <div class="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                <p class="text-sm text-gray-600 dark:text-teal-300">
-                  Aniversário
-                </p>
-                <p class="text-base font-medium text-navy-700 dark:text-white">
-                  25 Fevereiro 2004
-                </p>
-              </div>
+            <div className="flex flex-col justify-center bg-white bg-clip-border p-4 shadow-lg rounded-md dark:!bg-navy-700 dark:shadow-none">
+              <p className="text-sm text-cyan-500 dark:text-teal-300 flex items-center">
+                Aniversário
+                <FaBirthdayCake className="ml-1" />
+              </p>
+              <p className="text-base font-medium text-navy-700 dark:text-white">
+                25 de fevereiro de 2004
+              </p>
             </div>
           </div>
         </div>
