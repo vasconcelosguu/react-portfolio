@@ -38,7 +38,7 @@ export default function Navbar() {
         <div className="hidden md:block">
         {router.pathname !== "/" && (
           <Link
-            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white dark:text-black px-4 py-2 rounded-md ml-8 hover:bg-gradient-to-r hover:from-cyan-600 hover:to-teal-600 transition duration-250 ease-in-out"
             href="/"
           >
             Home
@@ -46,7 +46,7 @@ export default function Navbar() {
         )}
         {router.pathname !== "/projects" && (
           <Link
-            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white dark:text-black px-4 py-2 rounded-md ml-8 hover:bg-gradient-to-r hover:from-cyan-600 hover:to-teal-600 transition duration-250 ease-in-out"
             href="/projects"
           >
             Projects
@@ -54,7 +54,7 @@ export default function Navbar() {
         )}
         {router.pathname !== "/about" && (
           <Link
-          className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+          className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white dark:text-black px-4 py-2 rounded-md ml-8 hover:bg-gradient-to-r hover:from-cyan-600 hover:to-teal-600 transition duration-250 ease-in-out"
           href="/about"
         >
           Sobre Mim
